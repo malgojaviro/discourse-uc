@@ -1,11 +1,57 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700");
+
+
+//@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700");
+
+
+@font-face {
+  font-family: 'FK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: local('FK Grotesk'), local('FKGrotesk'), url(https://ucarecdn.com/5e18b399-445b-41b6-a525-88396ce07790/FKGroteskRegular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'FK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: local('FK Grotesk Medium'), local('FKGrotesk-Medium'), url(https://ucarecdn.com/eb49db28-bb78-441d-8b4d-5ac08c17e9cd/FKGroteskMedium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'FK Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: local('FK Grotesk Bold'), local('FKGrotesk-Bold'), url(https://ucarecdn.com/498c3b24-ee17-4bf8-b4bb-d71ebba83d44/FKGroteskBold.woff2) format('woff2');
+}
+/*
+@font-face {
+  font-family: 'FK Grotesk Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('FK Grotesk Mono'), local('FKGrotesk-Mono'), url(https://ucarecdn.com/6364445f-c4a0-42fe-aa72-7ad422d600ca/FKGroteskMonospaced.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+*/
+
 @import "common/foundation/variables"; // Pulls in Discourse SASS variables
+
+$primary-blue: #0E54FF;
+$hover-blue: #0242DF;
+$down-blue: #003AC9;
+$light-blue: #D6E4FF;
+$basic-gray: #808080;
+$border-blue: #749CFF;
+$font-primary: "FK Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+
+$font-mono: "FK Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+$mono-spacing: 0.02em;
 
 // Global styles
 
 html {
-  font-family: "Source Serif Pro", serif;
+  font-family: $font-primary;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .select-kit.combo-box .select-kit-header,
@@ -24,6 +70,33 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   border-color: $primary-low-mid;
+  border-radius: 6px;
+  font-family: $font-mono;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: $mono-spacing;
+  &:hover {
+    color: $primary-blue;
+    border-color: $border-blue;
+    .d-icon {
+      color: $primary-blue;
+    }
+  }
+  &.active,
+  &:focus,
+  &.is-focused {
+    border: 1px solid black;
+    color: black;
+    box-shadow: none;
+    .d-icon {
+      color: black;
+    }
+  }
+}
+
+.filter-input {
+  font-family: $font-primary;
+  letter-spacing: normal;
 }
 
 tbody {
@@ -73,6 +146,22 @@ tbody {
 .d-header {
   box-shadow: none;
   border-bottom: 1px solid $primary-low;
+  li.header-dropdown-toggle>a {
+    background-color: transparent;
+
+    .d-icon {
+      color: #B5B5B5;
+    }
+
+    &:hover {
+      background-color: transparent;
+      .d-icon {
+        color: black;
+        transition: color .3s;
+      }
+    }
+    
+  }
 }
 
 // Navs
@@ -518,12 +607,17 @@ span.latest-poster a {
 .select-kit.dropdown-select-box .dropdown-select-box-header {
   background: transparent;
   border: 1px solid $primary-low;
+  border-radius: 6px;
+  font-family: $font-mono !important;
+  font-size: 15px !important;
+  letter-spacing: $mono-spacing;
   .discourse-no-touch & {
     &:hover {
-      background: $primary-low;
-      color: currentColor;
+      background: transparent;
+      border: 1px solid $border-blue;
+      color: $primary-blue;
       .d-icon {
-        color: $primary-high;
+        color: $primary-blue;
       }
     }
   }
@@ -647,6 +741,20 @@ span.date-section {
 
 .menu-links.columned li {
   width: 100%;
+  a {
+    color: black;
+    font-family: $font-primary;
+    font-size: 15px;
+    line-height: 25px;
+    &:hover {
+      color: $primary-blue;
+      background-color: transparent;
+    }
+  }
+}
+
+.d-header-icons .d-icon {
+  width: 60%;
 }
 
 ul.category-links {
@@ -811,3 +919,58 @@ div.bio {
 .collection-header h3 {
   display: none;
 }
+
+.nav-pills>li a {
+  border-radius: 6px;
+  font-size: 15px;
+  letter-spacing: $mono-spacing;
+  font-family: $font-mono;
+}
+
+.nav-pills>li a:hover {
+  color: $primary-blue;
+  background: none;
+}
+
+.nav-pills>li a.active,
+.nav-pills>li a.active:hover {
+  color: $primary-blue;
+  background: $light-blue;
+}
+
+a {
+  color: $primary-blue;
+}
+
+a:hover, a.title:hover {
+  color: $hover-blue;
+}
+
+a:visited {
+  color: $down-blue;
+}
+
+a.widget-link {
+  color: black !important;
+  font-family: $font-primary;
+  font-size: 15px;
+  line-height: 25px;
+  &:hover {
+    color: $primary-blue !important;
+    background-color: transparent !important;
+  }
+  d-icon {
+    color: black !important;
+  }
+  d-icon:hover {
+    color: $primary-blue !important;
+  }
+}
+
+div.menu-links-header .fa, div.menu-links-header a {
+  color: black;
+  &:hover{
+    color:$primary-blue;
+  }
+}
+
