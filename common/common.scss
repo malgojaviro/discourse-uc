@@ -974,24 +974,3 @@ div.menu-links-header .fa, div.menu-links-header a {
   }
 }
 
-// Buttons
-
-.btn {
-  border-radius: 6px;
-}
-
-.btn-icon,
-.btn-text,
-.btn-default,
-.btn-default .btn-icon-text {
-  border: 1px solid $primary-low-mid;
-  border-width: 1px;
-  background: transparent;
-  color: black;
-  
-  &:hover {
-    color: $primary-blue;
-    border-color: $border-blue;
-    background: transparent !important;
-  }
-}
