@@ -1,9 +1,21 @@
 {
-  "name": "Minima",
-  "about_url": "https://github.com/awesomerobot/minima/tree/master",
-  "license_url": "https://github.com/awesomerobot/minima/blob/master/LICENSE",
+  "name": "Uploadcare",
+  "about_url": "",
+  "license_url": "",
   "assets": {
   },
   "color_schemes": {
+    "Space": {
+      "primary": "000000",
+      "secondary": "ffffff",
+      "tertiary": "0E54FF",
+      "quaternary": "808080",
+      "header_background": "ffffff",
+      "header_primary": "000000",
+      "highlight": "D6E4FF",
+      "danger": "FF6252",
+      "success": "26D777",
+      "love": "f50057"
+    }
   }
 }
