@@ -35,7 +35,7 @@
 
 @import "common/foundation/variables"; // Pulls in Discourse SASS variables
 
-$primary-blue: #0E54FF;
+$primary-blue: $tertiary;
 $hover-blue: #0242DF;
 $down-blue: #003AC9;
 $light-blue: #D6E4FF;
@@ -45,6 +45,19 @@ $font-primary: "FK Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,O
 
 $font-mono: "FK Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
 $mono-spacing: 0.02em;
+
+
+//$primary: black;
+//$secondary: white;
+//$tertiary: $primary-blue;
+//$quaternary:
+//$header_background:
+//$header_primary:
+//$highlight:
+//$danger:
+//$success:
+//$love:
+
 
 // Global styles
 
@@ -976,6 +989,7 @@ div.menu-links-header .fa, div.menu-links-header a {
 
 // Buttons
 
+button,
 .btn {
   border-radius: 6px;
 }
