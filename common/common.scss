@@ -74,6 +74,11 @@ input[type="color"], {
     color: $primary;
     border-color: $primary;
   }
+  &:focus,
+  &.is-focused {
+    border-color: $tertiary-border;
+    box-shadow: none;
+  }
 }
 
 tbody {
@@ -717,6 +722,15 @@ span.date-section {
 }
 
 // Menu panels
+
+.menu-links.columned a.widget-link {
+  color: $primary;
+  border-radius: 3px;
+  &:hover {
+    color: $tertiary;
+    background-color: transparent;
+  }
+}
 
 .hamburger-panel .menu-panel {
   max-width: 200px;
