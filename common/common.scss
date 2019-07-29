@@ -1,6 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700");
 @import "common/foundation/variables"; // Pulls in Discourse SASS variables
 
+// Fonts
+
+@font-face {
+  font-family: 'FK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: local('FK Grotesk'), local('FKGrotesk'), url(https://ucarecdn.com/5e18b399-445b-41b6-a525-88396ce07790/FKGroteskRegular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'FK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: local('FK Grotesk Medium'), local('FKGrotesk-Medium'), url(https://ucarecdn.com/eb49db28-bb78-441d-8b4d-5ac08c17e9cd/FKGroteskMedium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'FK Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: local('FK Grotesk Bold'), local('FKGrotesk-Bold'), url(https://ucarecdn.com/498c3b24-ee17-4bf8-b4bb-d71ebba83d44/FKGroteskBold.woff2) format('woff2');
+}
+/*
+@font-face {
+  font-family: 'FK Grotesk Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('FK Grotesk Mono'), local('FKGrotesk-Mono'), url(https://ucarecdn.com/6364445f-c4a0-42fe-aa72-7ad422d600ca/FKGroteskMonospaced.woff2) format('woff2');
+}
+*/
+
 // Global styles
 
 html {
