@@ -1,5 +1,5 @@
-# minima
-A minimal theme for Discourse.
+# Uploadcare theme
+Uploadcare theme for Discourse.
 
-Learn more
+Based on Minima:
 https://meta.discourse.org/t/minima-a-minimal-theme-for-discourse/108178
