@@ -37,6 +37,7 @@ $base-font-family: "FK Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Robo
 // Some vars
 $primary-radius: 6px;
 $tertiary-border: lighten( $tertiary, 20% );
+$tertiary-hover: darken( $tertiary, 20% );
 
 // Global styles
 
@@ -121,6 +122,10 @@ tbody {
 
 .badge-notification {
   padding: 0.27em 0.42em 0.15em;
+}
+
+a:hover {
+  color: $tertiary-hover;
 }
 
 // Header
@@ -729,6 +734,37 @@ span.date-section {
   &:hover {
     color: $tertiary;
     background-color: transparent;
+  }
+}
+
+li.glyphs a.widget-link:hover {
+  background: transparent;
+  color: $primary;
+  .d-icon {
+    color:$primary;
+  }
+}
+
+ul.menu-links a.widget-link,
+li.user a.widget-link {
+  color: $primary;
+  &:hover {
+    background: transparent;
+    color: $tertiary;
+  }
+}
+
+li.header-dropdown-toggle a.icon {
+  .d-icon {
+    transition: color 0.3s;
+    color: $primary;
+    width: 60%;
+  }
+  &:hover {
+    .d-icon {
+      color: $tertiary;
+    }
+    background: transparent;
   }
 }
 
