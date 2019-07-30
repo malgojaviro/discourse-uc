@@ -42,8 +42,14 @@ $tertiary-hover: darken( $tertiary, 20% );
 // Global styles
 
 html {
+  -webkit-font-smoothing: antialiased;
   font-family: $base-font-family;
   font-size: 16px;
+}
+
+code {
+  font-size: 0.875em;
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 
 .btn {
